@@ -121,7 +121,7 @@ main {
 
 .nav {
     position: absolute;
-    bottom: 10rem;
+    bottom: 12rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 5;
@@ -149,7 +149,7 @@ main {
         }
 
         & .description {
-            font-size: 0.7rem;
+            font-size: 0.8rem;
         }
 
         & button {
@@ -187,7 +187,7 @@ main {
         }
 
         & .description {
-            font-size: 0.65rem;
+            font-size: 0.8rem;
         }
 
         & button {

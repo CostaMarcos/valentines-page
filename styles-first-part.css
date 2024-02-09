@@ -49,9 +49,8 @@ body {
     text-decoration: none;
     font-size: 2rem;
     font-family: sans-serif;
-    transition: background 0.32s ease-in-out, box-shadow 0.32s ease-in-out;
+    transition: background 0.32s ease-in-out, box-shadow 0.32s ease-in-out, opacity 1s ease-in-out;
 }
-
 
 .button span {
     transition: color 0.32s ease-in-out;
@@ -59,9 +58,10 @@ body {
 
 .button:hover, .button:focus, .button.active {
     background: #b62f2f;
-    
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.48);
+    opacity: 1;
 }
+
 .button:hover span, .button:focus span, .button.active span {
     color: #fff;
 }

@@ -5,12 +5,12 @@ endButton.hidden = true;
 consoleText([
     'Olá amor',
     'Hoje celebramos seis meses juntos',
-    'E a cada dia ao seu lado',
-    'Eu me sinto mais feliz',
+    'E a cada dia ao seu lado eu me sinto mais feliz',
     'Quero que saiba',
     'O quanto você significa para mim,',
     'Não apenas neste momento,',
     'Mas em todos os momentos que compartilhamos desde que nos conhecemos.',
+    'Tenho certeza que mais dias como esse virão',
     'Obrigado por tudo',
     ''
 ], 'text', ['tomato']);
