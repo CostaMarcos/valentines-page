@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniversário de Namoro</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 20px 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .carousel {
+            position: relative;
+            margin: 20px 0;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .carousel-item p {
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: #ff6f61;
+        }
+
+        button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #ff4c3b;
+        }
+
+        .gift {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #ff6f61;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Feliz Aniversário de Namoro, Meu Amor!</h1>
+        </header>
+        <section class="content">
+            <div class="carousel">
+                <div class="carousel-images">
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/600x400?text=Momento+1" alt="Momento 1">
+                        <p>Nosso primeiro encontro, onde tudo começou. 💖</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/600x400?text=Momento+2" alt="Momento 2">
+                        <p>Uma viagem inesquecível juntos. 🌍</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/600x400?text=Momento+3" alt="Momento 3">
+                        <p>Um dia perfeito na praia. 🌊</p>
+                    </div>
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">❮</button>
+                <button class="next" onclick="moveSlide(1)">❯</button>
+            </div>
+            <div class="message">
+                <p>Hoje celebramos mais um ano de amor, risadas e memórias inesquecíveis. Cada momento ao seu lado é um
+                    presente que guardo com carinho no meu coração.</p>
+                <p>Você é a razão do meu sorriso e a luz dos meus dias. Que venham muitos mais anos juntos, repletos de
+                    aventuras e felicidade!</p>
+            </div>
+            <button id="show-gift">Clique para uma Sur presa!</button>
+            <div id="gift" class="gift hidden">
+                <p>🎁 Uma viagem romântica para a praia está a caminho! 🌊</p>
+            </div>
+        </section>
+        <footer>
+            <p>Com amor, sempre. ❤️</p>
+        </footer>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+        function moveSlide(direction) {
+            const slides = document.querySelectorAll('.carousel-item');
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            const offset = -currentSlide * 100;
+            document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+        }
+
+        document.getElementById('show-gift').addEventListener('click', function() {
+            const gift = document.getElementById('gift');
+            gift.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
